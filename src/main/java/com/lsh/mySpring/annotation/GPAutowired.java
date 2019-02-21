@@ -5,10 +5,10 @@ import java.lang.annotation.*;
 /**
  * Created by houbank on 2019/2/20.
  */
-@Target({ElementType.TYPE})
+@Target({ElementType.FIELD})
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
-public @interface GPController {
-
+public @interface GPAutowired {
+    
     String value() default "";
 }
