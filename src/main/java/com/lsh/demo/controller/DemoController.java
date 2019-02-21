@@ -1,6 +1,7 @@
 package com.lsh.demo.controller;
 
 import com.lsh.demo.service.DemoService;
+import com.lsh.demo.service.IDemoService;
 import com.lsh.mySpring.annotation.GPAutowired;
 import com.lsh.mySpring.annotation.GPController;
 import com.lsh.mySpring.annotation.GPRequestMapping;
@@ -17,7 +18,7 @@ import javax.servlet.http.HttpServletResponse;
 public class DemoController {
 
     @GPAutowired
-    private DemoService demoService;
+    private IDemoService demoService;
 
     @GPRequestMapping("/query.json")
     public void query(HttpServletRequest request, HttpServletResponse response, @GPRequestParam String name){

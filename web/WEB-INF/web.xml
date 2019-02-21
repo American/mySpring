@@ -8,8 +8,13 @@
         <servlet-name>gpmvc</servlet-name>
         <servlet-class>com.lsh.mySpring.servlet.GPDispatcherServlet</servlet-class>
         <init-param>
-            <param-name>namespace</param-name>
-            <param-value>contextConfigLocation</param-value>
+            <param-name>contextConfigLocation</param-name>
+            <param-value>application.properties</param-value>
         </init-param>
+        <load-on-startup>1</load-on-startup>
     </servlet>
+    <servlet-mapping>
+        <servlet-name>gpmvc</servlet-name>
+        <url-pattern>/*</url-pattern>
+    </servlet-mapping>
 </web-app>
