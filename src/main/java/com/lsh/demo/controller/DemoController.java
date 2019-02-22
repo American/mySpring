@@ -21,7 +21,7 @@ public class DemoController {
     private IDemoService demoService;
 
     @GPRequestMapping("/query.json")
-    public void query(HttpServletRequest request, HttpServletResponse response, @GPRequestParam String name){
+    public void query(HttpServletRequest request, HttpServletResponse response, @GPRequestParam("name") String name){
         try {
             String result = demoService.getName(name);
             response.getWriter().write(result);
